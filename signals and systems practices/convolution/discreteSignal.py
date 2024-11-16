@@ -16,8 +16,16 @@ class discreteSignal:
             
     def shiftSignal(self, shift):
         newDiscreteSignal = discreteSignal(self.INF)
-        newDiscreteSignal.values = np.roll(self.values,shift)
+        newDiscreteSignal.values = np.roll(self.values, shift)
+    
+        if shift > 0:
+            newDiscreteSignal.values[:shift] = 0
+        elif shift < 0:
+            
+            newDiscreteSignal.values[len(newDiscreteSignal.values) + shift:] = 0
+    
         return newDiscreteSignal
+    
     
     def add(self,other):
         if(self.INF==other.INF):
