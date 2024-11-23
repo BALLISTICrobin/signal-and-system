@@ -22,7 +22,7 @@ def rectangular_function(x):
 x_values = np.linspace(-10, 10, 1000)
 
 # Choose one function at a time for demonstration
-y_values = triangular_function(x_values)  # Change to triangular_function, sawtooth_function, or rectangular_function
+y_values = sawtooth_function(x_values)  # Change to triangular_function, sawtooth_function, or rectangular_function
 
 # Plot the original function
 plt.figure(figsize=(12, 4))
