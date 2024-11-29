@@ -72,7 +72,7 @@ def generate_signal(n, frequencies=[5, 15, 30], amplitudes=[1.0, 0.5, 0.3]):
     return signal
 
 # Main analysis
-signal_lengths = [2**k for k in range(2, 12)]  # Powers of 2 from 4 to 1024
+signal_lengths = [2**k for k in range(2, 10)]  # Powers of 2 from 4 to 1024
 dft_runtimes = []
 idft_runtimes = []
 fft_runtimes = []
